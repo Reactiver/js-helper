@@ -14,7 +14,7 @@ function next(item, str, path) {
     console.log(`path ${path}`);
   } else if (Array.isArray(item)) {
     parseArray(item, str, path);
-  } else if (typeof item === "object" && item + "" !== "null") {
+  } else if (typeof item === "object" && item !== null) {
     parseObject(item, str, path);
   }
 }
