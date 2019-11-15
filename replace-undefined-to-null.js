@@ -1,8 +1,8 @@
 function replaceUndefinedToNull(item) {
   if (Array.isArray(item)) {
-    return parseArray(item);
+    return JSON.parse(JSON.stringify(parseArray(item)));
   } else {
-    return parseObject(item);
+    return JSON.parse(JSON.stringify(parseObject(item)));
   }
 }
 
